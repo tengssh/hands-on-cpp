@@ -3,7 +3,7 @@
 This repository contains the code for the exercises from the course "Introduction to the C++ Programming Language" by Slobodan Dmitrovic. The course description can be found on the [website](https://indico.ecap.work/event/195/).
 
 ## C++ for Beginner
-<details open>
+<details>
 <summary><a href="./Day1">Day 1</a></summary>
 
 - Compiler
