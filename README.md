@@ -4,7 +4,7 @@ This repository contains the code for the exercises from the course "Introductio
 
 ## C++ for Beginner
 <details>
-<summary><a href="./Day1">Day 1</a></summary>
+<summary><a href="./Day1">Day1</a></summary>
 
 - Compiler
   - Install: `sudo apt install g++`
