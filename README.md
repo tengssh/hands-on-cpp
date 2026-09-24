@@ -63,3 +63,37 @@ This repository contains the code for the exercises from the course "Introductio
   - Struct: public access by default
 
 </details>
+<details>
+<summary><a href="./Day3">Day3</a></summary>
+
+- Class
+  - Inheritance: `class DerivedClass : public BaseClass`
+    - Move semantics
+      - `#include <utility>`
+      - `std::move(O)`
+      - Move constructors
+        - `BaseClass(BaseClass&& rhs) : xb{std::move(rhs.xb)}{}`
+        - `DerivedClass(DerivedClass&& rhs) noexcept : BaseClass(std::move(rhs)), xd{std::move(rhs.xd)}{}`
+      - Move assignment operator
+        - `DerivedClass& operator=(DerivedClass&& rhs){ Base::operator=(std::move(rhs)); x = std::move(rhs.x); return *this; }`
+    - Operator overloading
+      - Member or freestanding functions
+    - lvalue (`const Cls& rhs`) & rvalue (`Cls&& rhs`) reference
+  - Polymorphism
+    - 1) inheritance, 2) interfaces, 3) pointers
+    - Virtual functions
+      - `virtual TYPE v_fn() = 0` (pure virtual function)
+      - `virtual ~Cls(){}` (destructor for `delete`)
+    - `BaseClass* p_k = new DerivedClass_k; p_k->v_fn();`
+- Smart pointers
+  - `#include <memory>`
+  - Unique pointers
+    - `std::unique_ptr<TYPE> up = std::make_unique<TYPE>(ARGS)`
+  - Shared pointers
+    - `std::shared_ptr<TYPE> sp = std::make_shared<TYPE>(ARGS)`
+- The `static` specifier
+  - Static storage duration
+  - In local/global scope
+  - Class members: `Cls::member`
+
+</details>
