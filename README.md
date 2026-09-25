@@ -97,3 +97,42 @@ This repository contains the code for the exercises from the course "Introductio
   - Class members: `Cls::member`
 
 </details>
+<details>
+<summary><a href="./Day4">Day4</a></summary>
+
+- Template (generic programming)
+  - `template <typename T>`, `template <class T>`
+  - Template specialization: `template <>`
+- C++ Standard Library
+  - `<vector>`: `std::vector<TYPE> v = {...};`
+    - `v.push_back(new_element);`
+    - `v[0]`, `v.at(1)`
+    - Iterators: `auto it = v.begin();`, `it++;`, `*it`, `v.end()`
+    - Range-based loops: `for (const auto& el : v){...;}`
+    - `v.size()`
+  - `<list>` (doubly-linked list): `std::list<TYPE> l = {...};`
+  - `<forward_list>` (singly-linked list): `std::forward_list<TYPE> fl = {...};`
+  - `<array>`: `std::array<TYPE, N> a = {...};` (fixed size)
+  - `<set>` (unique elements): `std::set<TYPE> s = {...};`
+    - `s.insert(new_element);`
+    - `s.empty();`
+    - `s.clear();`
+  - `<map>` (unique key elements): `std::map<TYPE_KEY, TYPE_VALUE> m = {{...}, {...}};`
+    - `m.insert({key, value});`
+    - `m[key]`
+    - Iterators: `auto it = m.find(key);` (`it != m.end()`)
+    - `m.erase(key);`
+    - `el.first` (key), `el.second` (value)
+  - `<iterator>`
+    - `std::advance(it, 2);`
+  - `<utility>`
+    - `std::pair<TYPE_KEY, TYPE_VALUE> pr = std::make_pair(key, value);`
+  - `<algorithm>`
+    - `std::sort(v.begin(), v.end());`, `std::sort(v.begin(), v.end(), std::greater<int>());`
+    - `std::reverse(v.begin(), v.end());`
+    - `std::find(v.begin(), v.end(), element);`
+    - `std::copy(copy_from.begin(), copy_from.end(), copy_to.begin());`
+    - `std::min_element(std::begin(v), std::end(v));`, `std::max_element(std::begin(v), std::end(v));`
+    - `std::replace(v.begin(), v.end(), old, new);`
+
+</details>
