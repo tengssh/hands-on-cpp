@@ -136,3 +136,70 @@ This repository contains the code for the exercises from the course "Introductio
     - `std::replace(v.begin(), v.end(), old, new);`
 
 </details>
+<details>
+<summary><a href="./Day5">Day5</a></summary>
+
+- Lambda expressions: `[captures](params){code;}`, `auto f_lambda = [](){};`
+- Input/output streams
+  - `#include <fstream>`
+    - `std::fstream fs;`, `std::fstream fs{"FILE", MODE};`
+    - `fs.open("FILE", MODE)`
+      - Read mode: `std::ios::in`
+        - `fs >> c;`, `std::getline(fs, str);`
+        - `std::noskipws` (no skipping spaces)
+      - Write mode: `std::ios::out`, `std::ios::app`
+        - `fs << "TEXT";`
+    - `fs.is_open()`
+    - `fs.close();`
+  - `#include <sstream>`
+    - `std::istringstream` (read), `std::ostringstream` (write), `std::stringstream` (read or write)
+    - `std::stringstream ss{"STRING", MODE}; std::cout << ss.str();`
+- C++ standards
+  - C++11 standard
+    - Anything below C++11 should not used.
+    - `auto`
+    - Range-based loops
+    - Initializer lists
+    - Move semantics
+    - Lambda expressions
+    - The constexpr specifier: `constexpr`
+    - Scoped enumerator: `enum class NAME { A, B, C };`, `enum class NAME : TYPE { A, B, C };`
+    - Smart pointers
+    - Unordered set
+      - `#include <unordered_set>`
+      - `std::unordered_set<TYPE> s = {...};`
+    - Unordered maps
+      - `#include <unordered_map>`
+      - `std::unordered_map<KEY_TYPE, VALUE_TYPE> m = {{key, value}, ...};`
+    - Tuple (more values than `std::pair`)
+      - `#include <tuple>`
+      - `std::tuple<TYPE1, TYPE2, TYPE3, ...> t = {...};`
+    - `static_assert(a == b, "MESSAGE");`
+    - `=default;`, `=delete;`
+    - Type aliases: `using new_type_name = TYPE; new_type_name var = value;`
+  - C++14 standard
+    - Binary literals: `0b...`
+    - Digit separators: `1'000'000`
+    - `auto func(){}`, `auto f_lambda = [](auto v){}`
+    - `std::make_unique`
+  - C++17 standard
+    - Nested namespaces: `namespace A::B::C {...}`
+    - Structured bindings
+      - `auto [v1, v2, ..., vn] = array;` (`v1` = `array[0]`)
+      - `auto& [r1, r2, ..., rn] = array;` (`r1` = `array[0]`)
+    - File system
+      - `#include <filesystem>`
+    - String view
+      - `#include <string_view>`
+      - `std::string_view sv(str);`, `std::string_view sv(str.c_str(), N_CHAR);`
+    - Any type
+      - `#include <any>`
+      - `std::any a = value;`, `std::any_cast<TYPE>(a)`
+    - Variant (type-safe union)
+      - `#include <variant>`
+      - `std::variant<TYPE1, TYPE2, ...> vt{VALUE1};`
+      - `std::get<0>(vt)`, `std::get<TYPE1>(vt)`
+      - `vt = VALUE2;`
+      - `std::get<1>(vt)`, `std::get<TYPE2>(vt)`
+
+</details>
