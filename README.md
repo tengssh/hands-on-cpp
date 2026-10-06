@@ -156,7 +156,7 @@ This repository contains the code for the exercises from the course "Introductio
     - `std::stringstream ss{"STRING", MODE}; std::cout << ss.str();`
 - C++ standards
   - C++11 standard
-    - Anything below C++11 should not used.
+    - Anything below C++11 should not be used.
     - `auto`
     - Range-based loops
     - Initializer lists
