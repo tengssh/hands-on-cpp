@@ -1,6 +1,8 @@
 # Hands-on C++
 
-This repository contains the code for the exercises from the course "Introduction to the C++ Programming Language" by Slobodan Dmitrovic. The course description can be found on the [website](https://indico.ecap.work/event/195/).
+This repository contains the notes and code snippets for the following C++ training courses:
+- [C++ for Beginner](https://indico.ecap.work/event/195/) by Slobodan Dmitrovic.
+- [Modern C++ Software Design](https://indico.ecap.work/event/196/) by Klaus Igelberger
 
 ## C++ for Beginner
 <details>
