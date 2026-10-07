@@ -205,3 +205,45 @@ This repository contains the notes and code snippets for the following C++ train
       - `std::get<1>(vt)`, `std::get<TYPE2>(vt)`
 
 </details>
+
+## Modern C++ Software Design
+<details>
+<summary>20261007</summary>
+
+- Standard Library & Standard Template Library (STL)
+  - No raw loops.
+  - Algorithms library
+    - `std::shuffle`
+    - `std::min_element`
+    - `std::sort`, `std::stable_sort`
+    - `std::accumulate`
+    - `std::transform_reduce`
+    - `std::fold_left` (C++23)
+    - `std::rotate`
+    - `std::nth_element`
+    - `std::ranges` (C++20)
+      - The same performance, easier to use
+  - Iterators
+    - Raw C array does not have member iterators. => Use `std::begin()`, `std::end()`
+  - Naming is important. => Readability
+  - Explicit type for the initial values (e.g., `int{}`)
+  - DRY (Don't Repeat Yourself)
+    - In-line lambda (faster) vs. Lambda pointer (runtime overhead)
+    - Function objects (compile-time optimization)
+      - `struct NAME {void operator()(TYPE args){...}};` (call operators overload)
+      - Lambda factory: `auto conditional_lambda(TYPE args){return [args](){...;}}`
+- Templates
+  - Template instantiation/specialization
+    - Name lookup
+    - Template argument deduction
+    - Overload resolution (Exact match > Promotion > Standard conversion > User-defined conversion)
+    - SFINAE (Substitution Failure Is Not An Error)
+  - Type trait
+    - `auto` requires a unified type for all return statements.
+    - `using Return = typename std::common_type<T,U>::type;`
+    - `return Return();`
+  - Conditional (ternary) operator
+    - `( a < b ? b : a )`
+    - Expression, not a statement
+
+</details>
