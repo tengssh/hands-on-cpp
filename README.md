@@ -247,3 +247,54 @@ This repository contains the notes and code snippets for the following C++ train
     - Expression, not a statement
 
 </details>
+<details>
+<summary>20261008</summary>
+
+- Templates
+  - Concepts (C++20)
+    - Compile-time `bool` evaluation
+    - `std::integral<T>`
+    - Type traits
+      - `std::is_convertible_v<T, int>`
+      - `std::is_arithmetic_v<T>`
+      - `std::remove_cv_t<T>` (type transformation)
+    - Requires expression (checks whether requirements are valid for compilation)
+      - `requires(T t, ...);` (wish list)
+      - `typename T::iterator`, `typename T::const_iterator`, `typename T::value_type`
+      - `{ t.begin() } -> std::same_as<typename T::iterator>;`
+      - `(... or ...) and ...;`
+- Class design
+  - (Default) Constructor & Destructor
+  - Object lifetimes
+    - Stack
+    - Constructed in declaration order and destructed in reverse order
+    - Scope
+    - Smart pointers (deterministic) => RAII
+  - RAII (Resource Acquisition Is Initialization)
+  - The Special Member Functions (SMFs)
+  - Initialization
+    - Static storage duration: zero-initialization
+    - Default initialization
+    - Value initialization
+    - Default member initialization
+    - Member initializer list
+    - Aggregate initialization
+  - Copy semantics
+    - Copy constructor & Copy assignment operator
+    - Self-assignment
+    - Copy-and-swap idiom
+  - Move semantics
+    - Move constructor & Move assignment operator
+    - Lvalue and Rvalue
+      - Roughly speaking, lvalue has a name; rvalue does not have a name.
+      - Xvalue (Expiring value): `std::move(lvalue)`
+      - Lvalues can be copied; rvalues can often be moved.
+    - Move-and-swap idiom
+  - The Rule of Five/Zero
+    - Destructor
+    - Copy Ctor
+    - Copy assignment operator
+    - Move Ctor
+    - Move assignment operator
+
+</details>
