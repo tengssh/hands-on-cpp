@@ -82,7 +82,7 @@ This repository contains the notes and code snippets for the following C++ train
       - Member or freestanding functions
     - lvalue (`const Cls& rhs`) & rvalue (`Cls&& rhs`) reference
   - Polymorphism
-    - 1) inheritance, 2) interfaces, 3) pointers
+    - (1) inheritance, (2) interfaces, (3) pointers
     - Virtual functions
       - `virtual TYPE v_fn() = 0` (pure virtual function)
       - `virtual ~Cls(){}` (destructor for `delete`)
