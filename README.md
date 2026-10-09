@@ -298,3 +298,7 @@ This repository contains the notes and code snippets for the following C++ train
     - Move assignment operator
 
 </details>
+
+## References
+- https://cppreference.com/
+- https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
