@@ -1,7 +1,7 @@
 # Hands-on C++
 
 This repository contains the notes and code snippets for the following C++ training courses:
-- [C++ for Beginner](https://indico.ecap.work/event/195/) by Slobodan Dmitrovic.
+- [C++ for Beginner](https://indico.ecap.work/event/195/) by Slobodan Dmitrovic
 - [Modern C++ Software Design](https://indico.ecap.work/event/196/) by Klaus Igelberger
 
 ## C++ for Beginner
@@ -296,6 +296,52 @@ This repository contains the notes and code snippets for the following C++ train
     - Copy assignment operator
     - Move Ctor
     - Move assignment operator
+
+</details>
+<details>
+<summary>20261009</summary>
+
+- Class design
+  - Order of member data
+    - Alignment (4-byte on x64/ARM)
+      - `alignof(char)`: 1
+      - `alignof(*ptr)`: 8
+      - `alignof(EmptyClass)`: 1
+    - Padding
+    - General principles: larger members first
+  - Code review
+    - Const correctness
+    - Initialization & RAII
+    - Naming
+    - No raw loops
+    - Header guard
+      - Don't use the reserved names: `__...`, `_I`
+      - One-Definition Rule (ODR)
+      - Alternative: `#pragma once`
+    - `#include`
+      - Static code analysis
+    - `using` directive
+      - Name collisions
+    - Taste
+    - Documentation
+    - Also give positive motivated feedback
+- Dynamic polymorphism
+  - OOP (Object-Oriented Programming)
+  - Inheritance
+    - ABC (Abstract Base Class)
+    - Virtual dispatch
+      - Virtual functions
+      - Virtual pointers & virtual function table (overhead)
+      - `override`
+    - Virtual destructor
+  - Design patterns
+    - The strategy design pattern
+      - Template
+      - Unique pointers & move semantics
+      - Dependency injection
+- AI
+  - Human-in-the-loop
+  - Documentation (use but verify)
 
 </details>
 
