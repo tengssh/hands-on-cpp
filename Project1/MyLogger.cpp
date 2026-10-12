@@ -1,5 +1,4 @@
 #include "MyLogger.h"
-#include <typeinfo>
 using namespace mylogger;
 
 MyLogger::MyLogger() = default;
