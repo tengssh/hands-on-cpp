@@ -23,10 +23,8 @@ MyLogger::MyLogger(MyLogger&& other) noexcept : fs{ std::move(other.fs) }
 }
 MyLogger& MyLogger::operator=(MyLogger&& other) noexcept
 {
-    if (this != &other){
-        std::cout << "Move assignment\n";
-        fs = std::move(other.fs);
-    }
+    std::cout << "Move assignment\n";
+    std::swap(fs, other.fs);
     return *this;
 }
 
