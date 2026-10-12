@@ -1,14 +1,12 @@
 #include "MyLogger.h"
 using namespace mylogger;
 
-// define the constructor(s)
 MyLogger::MyLogger() = default;
 MyLogger::MyLogger(const std::string& afilename) : fs{afilename, std::ios::app}
 {
     std::cout << "Constructor: " << afilename << '\n';
 }
 
-// define the logToAFile member function
 void MyLogger::logToAFile(const std::string& amessage)
 {
     std::cout << "Receiving message from logToAFile:\n";
@@ -22,14 +20,12 @@ void MyLogger::logToAFile(const std::string& amessage)
     }
 }
 
-// define the logToAConsole member function
 void MyLogger::logToAConsole(const std::string& amessage)
 {
     std::cout << "Receiving message from logToAConsole:\n";
     std::cout << amessage;
 }
 
-// define the logTo member function
 void MyLogger::logTo(LogDestination arg, const std::string& amessage)
 {
     std::cout << "Receiving message from logTo:\n";
@@ -50,7 +46,6 @@ void MyLogger::logTo(LogDestination arg, const std::string& amessage)
     }
 }
 
-// Move semantics
 MyLogger::MyLogger(MyLogger&& rhs) noexcept : fs{ std::move(rhs.fs) }
 {
     std::cout << "Move constructor\n";
@@ -62,7 +57,6 @@ MyLogger& MyLogger::operator=(MyLogger&& rhs) noexcept
     return *this;
 }
 
-// define the destructor
 MyLogger::~MyLogger()
 {
     if (fs.is_open())

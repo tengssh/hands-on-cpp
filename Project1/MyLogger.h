@@ -18,13 +18,11 @@ class MyLogger
 private:
 	std::fstream fs;
 public:
-	MyLogger(); // default constructor
-	MyLogger(const std::string& afilename); // user-provided constructor
-	~MyLogger(); // destructor
-	// Copy semantics? Explore if std::fstream is copyable
+	MyLogger();
+	MyLogger(const std::string& afilename);
+	~MyLogger();
     MyLogger(const MyLogger& rhs) = delete;
 	MyLogger& operator=(const MyLogger& rhs) = delete;
-	// Move semantics? Explore if std::fstream is movable
 	MyLogger(MyLogger&& rhs) noexcept;
 	MyLogger& operator=(MyLogger&& rhs) noexcept;
 	void logToAFile(const std::string& amessage);

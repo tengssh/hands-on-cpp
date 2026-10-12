@@ -5,17 +5,12 @@ using namespace mylogger;
 int main()
 {
 	MyLogger o("mylog.txt");
-	// call the following functions:
-	// o.logToAConsole
 	o.logToAConsole("Sending log to a console!\n");
-	// o.logToAFile
 	o.logToAFile("Sending log to a file!\n");
-	// o.logTo(...)
 	o.logTo(LogDestination::CONSOLE, "Sending log to CONSOLE\n");
 	o.logTo(LogDestination::FILE, "Sending log to FILE\n");
 	o.logTo(LogDestination::BOTH, "Sending log to BOTH\n");
 
-	// Test for the copy/movement
 	//MyLogger cp = o;
 	MyLogger mc = std::move(o);
 	mc.logToAConsole("MC: Sending log to a console!\n");
