@@ -1,6 +1,4 @@
- // implement a namespace, a code guard etc.
-#ifndef MYLOGGER_H
-#define MYLOGGER_H
+#pragma once
 
 #include <fstream>
 #include <iostream>
@@ -34,4 +32,3 @@ public:
 	void logTo(LogDestination arg, const std::string& amessage);
 };
 }
-#endif
