@@ -1,4 +1,5 @@
 #include "MyLogger.h"
+#include <typeinfo>
 using namespace mylogger;
 
 MyLogger::MyLogger() = default;
@@ -16,14 +17,16 @@ MyLogger::~MyLogger()
     }
 }
 
-MyLogger::MyLogger(MyLogger&& rhs) noexcept : fs{ std::move(rhs.fs) }
+MyLogger::MyLogger(MyLogger&& other) noexcept : fs{ std::move(other.fs) }
 {
     std::cout << "Move constructor\n";
 }
-MyLogger& MyLogger::operator=(MyLogger&& rhs) noexcept
+MyLogger& MyLogger::operator=(MyLogger&& other) noexcept
 {
-    std::cout << "Move assignment\n";
-    fs = std::move(rhs.fs);
+    if (this != &other){
+        std::cout << "Move assignment\n";
+        fs = std::move(other.fs);
+    }
     return *this;
 }
 
