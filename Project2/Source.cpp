@@ -5,8 +5,8 @@ using namespace person;
 
 int main()
 {
-	int i;
-	std::vector<Employee> v = {// initialize a vector of employees
+	int i{};
+	std::vector<Employee> v = {
 		Employee("Alice", 30, "CEO"),
 		Employee("Bob", 31, "CTO"),
 		Employee("Charlie", 28, "CFO"),
@@ -15,11 +15,9 @@ int main()
 	i = v.size();
 	for (auto el : v)
 	{
-		el.call(v[--i]); /*invoke one or more member functions here*/
+		el.call(v[--i]);
 	}
 
-	// Bonus requirement:
-	// Make a vector of polymorphic pointers/objects
 	std::vector<std::unique_ptr<Person>> upv;
 	upv.push_back(std::make_unique<Employee>("David", 25, "Engineer"));
 	upv.push_back(std::make_unique<Employee>("Eve", 26, "HR"));
@@ -30,9 +28,8 @@ int main()
 	 	el->call(*upv[--i]);
 	}
 
-	// move semantics
 	Employee e1 = std::move(v.at(2));
-	Employee e2;
+	Employee e2{};
 	e2 = std::move(e1);
 	std::cout << "Move: " << e2.get_name() << '\n';
 }
