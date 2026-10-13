@@ -13,9 +13,11 @@ Person::Person(const Person& rhs) : name{rhs.name}, age{rhs.age}
 
 Person& Person::operator=(const Person& rhs)
 {
-    std::cout << "Person copy assignment\n";
-    name = rhs.name;
-    age = rhs.age;
+    if (this != &rhs){
+        std::cout << "Person copy assignment\n";
+        name = rhs.name;
+        age = rhs.age;
+    }
     return *this;
 }
 
@@ -24,11 +26,13 @@ Person::Person(Person&& rhs) noexcept : name{std::move(rhs.name)}, age{std::move
     std::cout << "Move constructor\n";
 }
 
-Person& Person::operator=(Person&& rhs) noexcept
+Person& Person::operator=(Person&& other) noexcept
 {
-    std::cout << "Move assignment\n";
-    name = std::move(rhs.name);
-    age = std::move(rhs.age);
+    if (this != &other){
+        std::cout << "Move assignment\n";
+        name = std::move(other.name);
+        age = std::move(other.age);
+    }
     return *this;
 }
 
