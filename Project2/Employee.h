@@ -9,10 +9,7 @@ private:
 public:
 	Employee() = default;
 	Employee(const std::string& aname, int argage, const std::string& arole);
-	// Implement several getters and setters
+	~Employee() = default;
 	std::string get_role() const;
-
-	// Bonus requirement:
-	// Create one or more overridden member functions
 	void call(const Person& p) const override;
 };
