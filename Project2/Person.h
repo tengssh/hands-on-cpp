@@ -10,8 +10,8 @@ namespace person {
 class Person
 {
 private:
-	std::string name;
-	int age;
+	std::string name{};
+	int age{};
 public:
 	// constructor
 	Person() = default;

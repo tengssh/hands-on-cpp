@@ -5,7 +5,7 @@ using namespace person;
 class Employee : public Person
 {
 private:
-	std::string role;
+	std::string role{};
 public:
 	Employee() = default;
 	Employee(const std::string& aname, int argage, const std::string& arole);
