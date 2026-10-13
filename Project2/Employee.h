@@ -1,6 +1,4 @@
-// implement code guards here
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#pragma once
 #include "Person.h"
 using namespace person;
 
@@ -18,4 +16,3 @@ public:
 	// Create one or more overridden member functions
 	void call(const Person& p) override;
 };
-#endif

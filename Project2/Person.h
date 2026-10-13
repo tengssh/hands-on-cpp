@@ -1,6 +1,4 @@
-// implement code guards here
-#ifndef PERSON_H
-#define PERSON_H
+#pragma once
 #include <string>
 #include <iostream>
 #include <vector>
@@ -34,4 +32,3 @@ public:
 	virtual void call(const Person& p) = 0;
 };
 }
-#endif
