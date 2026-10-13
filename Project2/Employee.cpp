@@ -11,7 +11,7 @@ std::string Employee::get_role() const
     return role;
 }
 
-void Employee::call(const Person& p)
+void Employee::call(const Person& p) const
 {
     std::cout << get_name() << " -- calls --> " << p.get_name() << '\n';
 }

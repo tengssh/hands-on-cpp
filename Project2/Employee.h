@@ -14,5 +14,5 @@ public:
 
 	// Bonus requirement:
 	// Create one or more overridden member functions
-	void call(const Person& p) override;
+	void call(const Person& p) const override;
 };

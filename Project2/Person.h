@@ -29,6 +29,6 @@ public:
 	int get_age() const;
 	// Bonus requirement:
 	// Create one or more virtual member functions
-	virtual void call(const Person& p) = 0;
+	virtual void call(const Person& p) const = 0;
 };
 }
