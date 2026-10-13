@@ -22,8 +22,8 @@ public:
 	Person(const Person& rhs);
 	Person& operator=(const Person& rhs);
 	// move semantics
-	Person(Person&& rhs) noexcept;
-	Person& operator=(Person&& rhs) noexcept;
+	Person(Person&& other) noexcept;
+	Person& operator=(Person&& other) noexcept;
 	// Implement several getters and setters
 	std::string get_name() const;
 	int get_age() const;

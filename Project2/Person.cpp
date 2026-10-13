@@ -21,7 +21,7 @@ Person& Person::operator=(const Person& rhs)
     return *this;
 }
 
-Person::Person(Person&& rhs) noexcept : name{std::move(rhs.name)}, age{std::move(rhs.age)}
+Person::Person(Person&& other) noexcept : name{std::move(other.name)}, age{std::move(other.age)}
 {
     std::cout << "Move constructor\n";
 }
