@@ -6,7 +6,7 @@ This repository contains the notes and code snippets for the following C++ train
 
 ## C++ for Beginner
 <details>
-<summary><a href="./Day1">Day1</a></summary>
+<summary><a href="./cpp-beginner/Day1">Day1</a></summary>
 
 - Compiler
   - Install: `sudo apt install g++`
@@ -26,7 +26,7 @@ This repository contains the notes and code snippets for the following C++ train
 
 </details>
 <details>
-<summary><a href="./Day2">Day2</a></summary>
+<summary><a href="./cpp-beginner/Day2">Day2</a></summary>
 
 - Scope
   - Storage duration: automatic, dynamic, static
@@ -66,7 +66,7 @@ This repository contains the notes and code snippets for the following C++ train
 
 </details>
 <details>
-<summary><a href="./Day3">Day3</a></summary>
+<summary><a href="./cpp-beginner/Day3">Day3</a></summary>
 
 - Class
   - Inheritance: `class DerivedClass : public BaseClass`
@@ -100,7 +100,7 @@ This repository contains the notes and code snippets for the following C++ train
 
 </details>
 <details>
-<summary><a href="./Day4">Day4</a></summary>
+<summary><a href="./cpp-beginner/Day4">Day4</a></summary>
 
 - Template (generic programming)
   - `template <typename T>`, `template <class T>`
@@ -139,7 +139,7 @@ This repository contains the notes and code snippets for the following C++ train
 
 </details>
 <details>
-<summary><a href="./Day5">Day5</a></summary>
+<summary><a href="./cpp-beginner/Day5">Day5</a></summary>
 
 - Lambda expressions: `[captures](params){code;}`, `auto f_lambda = [](){};`
 - Input/output streams
