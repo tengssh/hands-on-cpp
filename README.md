@@ -34,7 +34,7 @@ This repository contains the notes and code snippets for the following C++ train
   - Stack & Heap
   - Memory leak
 - Enum
-  - Unscoped: `eum ENUM_NAME {A, B, C};`
+  - Unscoped: `enum ENUM_NAME {A, B, C};`
   - Scoped: `enum class ENUM_NAME {};`, `enum ENUM_NAME : TYPE {};`
 - Namespace: `namespace { ...; }`
 - Header & Source files
